@@ -11,26 +11,59 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Header & Navigation -->
+
+
+ <!-- Fresh Clean Header -->
     <header class="header">
         <div class="container">
             <nav class="navbar">
-                <div class="logo">
-                    <h1>ANANT GLOBAL</h1>
+                <!-- Logo and Brand -->
+                <div class="brand">
+                    <div class="logo-placeholder">
+                        <i class="fas fa-globe-americas"></i>
+                    </div>
+                    <div class="brand-name">
+                        <h1>ANANT GLOBAL</h1>
+                        <p class="tagline">Global Opportunities</p>
+                    </div>
                 </div>
-                
-                <div class="nav-menu" id="navMenu">
-                    <ul class="nav-links">
-                        <li><a href="#" class="nav-link active">Home</a></li>
-                        <li><a href="#services" class="nav-link">Services</a></li>
-                        <li><a href="#countries" class="nav-link">Countries</a></li>
-                        <li><a href="#contact" class="nav-link">Contact</a></li>
-                        
-                    </ul>
-                    <a href="#contact" class="btn btn-primary">Get Free Consultation</a>
-                </div>
-                
-                <div class="hamburger" id="hamburger">
+
+               <!-- Navigation Menu -->
+<div class="nav-menu" id="navMenu">
+    <ul class="nav-links">
+        <li><a href="#" class="nav-link active">HOME</a></li>
+        <li><a href="#services" class="nav-link">SERVICES</a></li>
+        <li><a href="#countries" class="nav-link">COUNTRIES</a></li>
+        <li><a href="#contact" class="nav-link">CONTACT</a></li>
+        
+        <!-- AI Button with Dropdown -->
+        <li class="dropdown-container">
+            <a href="#" class="nav-link dropdown-trigger" data-dropdown="ai-dropdown">AI</a>
+            <div class="dropdown" id="ai-dropdown">
+                <span class="dropdown-text">Coming Soon</span>
+            </div>
+        </li>
+        
+        <!-- News Button with Dropdown -->
+        <li class="dropdown-container">
+            <a href="#" class="nav-link dropdown-trigger" data-dropdown="news-dropdown">NEWS</a>
+            <div class="dropdown" id="news-dropdown">
+                <span class="dropdown-text">Coming Soon</span>
+            </div>
+        </li>
+        
+        <!-- IELTS Button -->
+        <li><a href="#ielts" class="nav-link">IELTS</a></li>
+    </ul>
+    
+    <!-- Main CTA Button -->
+    <a href="#consultation" class="btn-consultation">
+        FREE CONSULTATION
+    </a>
+</div>
+
+                <!-- Mobile Menu Toggle -->
+                <div class="menu-toggle" id="menuToggle">
                     <span></span>
                     <span></span>
                     <span></span>
@@ -62,17 +95,17 @@
                         <div class="trust-icon">
                             <i class="fas fa-calendar-alt"></i>
                         </div>
-                        <h3 class="trust-number">15+ Years</h3>
+                        <h3 class="trust-number">3+ Years</h3>
                         <p class="trust-text">Experience</p>
                     </div>
                     
-                    <div class="trust-card">
+                    <!-- <div class="trust-card">
                         <div class="trust-icon">
                             <i class="fas fa-smile"></i>
                         </div>
-                        <h3 class="trust-number">1000+</h3>
+                        <h3 class="trust-number">Various</h3>
                         <p class="trust-text">Happy Clients</p>
-                    </div>
+                    </div> -->
                     
                     <div class="trust-card">
                         <div class="trust-icon">
@@ -86,7 +119,7 @@
                         <div class="trust-icon">
                             <i class="fas fa-globe-americas"></i>
                         </div>
-                        <h3 class="trust-number">20+</h3>
+                        <h3 class="trust-number">6+</h3>
                         <p class="trust-text">Countries Covered</p>
                     </div>
                 </div>
@@ -106,16 +139,16 @@
                         <div class="service-icon">
                             <i class="fas fa-passport"></i>
                         </div>
-                        <h3 class="service-title">Visa Guidance</h3>
-                        <p class="service-description">Expert assistance with visa applications, documentation, and interview preparation for various countries.</p>
+                        <h3 class="service-title">Tourist Visa</h3>
+                        <p class="service-description">Tourist visa assistance for travel to all countries worldwide.</p>
                     </div>
                     
                     <div class="service-card">
                         <div class="service-icon">
                             <i class="fas fa-graduation-cap"></i>
                         </div>
-                        <h3 class="service-title">Study Abroad Support</h3>
-                        <p class="service-description">Comprehensive guidance for university selection, application process, and scholarship opportunities.</p>
+                        <h3 class="service-title">Study Visa</h3>
+                        <p class="service-description">Study visa processing, including guidance for admission to top international colleges and universities.</p>
                     </div>
                     
                     <div class="service-card">
@@ -133,48 +166,259 @@
                         <h3 class="service-title">Documentation Help</h3>
                         <p class="service-description">Professional assistance with all required documentation, verification, and legal formalities.</p>
                     </div>
+                    
                 </div>
             </div>
         </section>
 
-         <!-- Destinations / Countries Section -->
-        <section class="countries-section" id="countries">
-            <div class="container">
-                <div class="section-header">
-                    <h2 class="section-title">Top Destinations</h2>
-                    <p class="section-subtitle">Explore opportunities in popular countries around the world</p>
+ <!-- Destinations / Countries Section -->
+<section class="countries-section" id="countries">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">Top Destinations</h2>
+            <p class="section-subtitle">Explore opportunities in popular countries around the world</p>
+        </div>
+        
+        <div class="countries-grid">
+            <!-- USA -->
+            <div class="country-card">
+                <div class="country-flag">
+                    <img src="image/us.flag.jpg" alt="USA Flag" class="flag-image">
+                </div>
+                <h3 class="country-name">USA</h3>
+            </div>
+            
+            <!-- Canada -->
+            <div class="country-card">
+                <div class="country-flag">
+                    <img src="image/can.flag.jpg" alt="Canada Flag" class="flag-image">
+                </div>
+                <h3 class="country-name">Canada</h3>
+            </div>
+            
+            <!-- UK -->
+            <div class="country-card">
+                <div class="country-flag">
+                    <img src="image/uk.flag.jpg" alt="UK Flag" class="flag-image">
+                </div>
+                <h3 class="country-name">UK</h3>
+            </div>
+            
+            <!-- Australia -->
+            <div class="country-card">
+                <div class="country-flag">
+                    <img src="image/aus.flag.jpg" alt="Australia Flag" class="flag-image">
+                </div>
+                <h3 class="country-name">Australia</h3>
+            </div>
+            
+            <!-- Europe -->
+            <div class="country-card">
+                <div class="country-flag">
+                    <img src="image/ero.flag.png" alt="Europe Flag" class="flag-image">
+                </div>
+                <h3 class="country-name">Europe</h3>
+            </div>
+            
+            <!-- Singapore -->
+            <!-- <div class="country-card">
+                <div class="country-flag">
+                    <img src="YOUR_SINGAPORE_FLAG_URL_HERE" alt="Singapore Flag" class="flag-image">
+                </div>
+                <h3 class="country-name">Singapore</h3>
+            </div> -->
+        </div>
+    </div>
+</section>
+
+
+
+
+             <!-- IELTS Program Section -->
+<section class="ielts-section" id="ielts">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">IELTS Excellence Program</h2>
+            <p class="section-subtitle">Master English proficiency with our comprehensive IELTS preparation</p>
+        </div>
+        
+        <div class="ielts-container">
+            <!-- IELTS Banner -->
+            <div class="ielts-banner">
+                <div class="ielts-badge">
+                    <span>8.5+</span>
+                    <small>Average Score</small>
+                </div>
+                <div class="ielts-content">
+                    <h3>Achieve Your Dream IELTS Score</h3>
+                    <p>Join thousands of students who have successfully cleared IELTS with our expert guidance, personalized coaching, and proven strategies.</p>
+                </div>
+            </div>
+            
+            <!-- IELTS Features -->
+            <div class="ielts-features">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h4>Personalized Coaching</h4>
+                    <p>One-on-one sessions with certified IELTS trainers tailored to your specific needs and weaknesses.</p>
                 </div>
                 
-                <div class="countries-grid">
-                    <div class="country-card">
-                        <div class="country-flag usa">
-                            <i class="fas fa-flag-usa"></i>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-book-open"></i>
+                    </div>
+                    <h4>Comprehensive Material</h4>
+                    <p>Access to updated study materials, practice tests, and official IELTS preparation resources.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h4>Flexible Schedules</h4>
+                    <p>Choose from weekday, weekend, or intensive crash courses that fit your timeline.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-laptop-house"></i>
+                    </div>
+                    <h4>Online & Offline</h4>
+                    <p>Learn from anywhere with our hybrid learning model - attend in-person or virtual classes.</p>
+                </div>
+            </div>
+            
+            <!-- IELTS Score Breakdown -->
+            <div class="score-breakdown">
+                <h3>Target Score Distribution</h3>
+                <div class="score-bars">
+                    <div class="score-item">
+                        <div class="score-label">
+                            <span>Listening</span>
+                            <span>8.0+</span>
                         </div>
-                        <h3 class="country-name">USA</h3>
+                        <div class="score-bar">
+                            <div class="score-fill listening" style="width: 85%"></div>
+                        </div>
                     </div>
                     
-                    <div class="country-card">
-                        <div class="country-flag canada">
-                            <i class="fas fa-flag"></i>
+                    <div class="score-item">
+                        <div class="score-label">
+                            <span>Reading</span>
+                            <span>7.5+</span>
                         </div>
-                        <h3 class="country-name">Canada</h3>
+                        <div class="score-bar">
+                            <div class="score-fill reading" style="width: 80%"></div>
+                        </div>
                     </div>
                     
-                    <div class="country-card">
-                        <div class="country-flag uk">
-                            <i class="fas fa-flag-uk"></i>
+                    <div class="score-item">
+                        <div class="score-label">
+                            <span>Writing</span>
+                            <span>7.0+</span>
                         </div>
-                        <h3 class="country-name">UK</h3>
+                        <div class="score-bar">
+                            <div class="score-fill writing" style="width: 75%"></div>
+                        </div>
                     </div>
                     
-                    <div class="country-card">
-                        <div class="country-flag australia">
-                            <i class="fas fa-flag"></i>
+                    <div class="score-item">
+                        <div class="score-label">
+                            <span>Speaking</span>
+                            <span>8.0+</span>
                         </div>
-                        <h3 class="country-name">Australia</h3>
+                        <div class="score-bar">
+                            <div class="score-fill speaking" style="width: 85%"></div>
+                        </div>
                     </div>
+                </div>
+            </div>
+            
+            <!-- IELTS Packages -->
+            <div class="ielts-packages">
+                <h3>Choose Your IELTS Package</h3>
+                <div class="packages-grid">
+                    <div class="package-card basic">
+                        <div class="package-header">
+                            <h4>1-Month</h4>
+                            <div class="package-price">
+                                <span class="currency">₹</span>
+                                <span class="amount">14,999</span>
+                               
+                            </div>
+                        </div>
+                        <ul class="package-features">
+                            <li><i class="fas fa-check"></i> Live Classes</li>
+                            <li><i class="fas fa-check"></i> Study Material</li>
+                            <li><i class="fas fa-check"></i> 4 Mock Tests</li>
+                            <li><i class="fas fa-check"></i> Expert Support</li>
+                        </ul>
+                        <button class="package-btn">Enroll Now</button>
                     </div>
                     
+                    <div class="package-card popular">
+                        <div class="popular-badge">Most Popular</div>
+                        <div class="package-header">
+                            <h4>3-Month</h4>
+                            <div class="package-price">
+                                <span class="currency">₹</span>
+                                <span class="amount">24,999</span>
+                               
+                            </div>
+                        </div>
+                        <ul class="package-features">
+                            <li><i class="fas fa-check"></i> Live Classes & Online</li>
+                            <li><i class="fas fa-check"></i> Personal Mentor</li>
+                            <li><i class="fas fa-check"></i> 15 Mock Tests</li>
+                            <li><i class="fas fa-check"></i> Writing Evaluation</li>
+                            <li><i class="fas fa-check"></i> Speaking Practice</li>
+                            <li><i class="fas fa-check"></i> Priority Support</li>
+                        </ul>
+                        <button class="package-btn primary">Enroll Now</button>
+                    </div>
+                    
+                    <div class="package-card intensive">
+                        <div class="package-header">
+                            <h4>IELTS Exam Fee Included</h4>
+                            <div class="package-price">
+                                <span class="currency">₹</span>
+                                <span class="amount">39,999</span>
+                                <span class="duration">/complete</span>
+                            </div>
+                        </div>
+                        <ul class="package-features">
+                            <li><i class="fas fa-check"></i> IELTS Study + Exam Fee</li>
+                            <li><i class="fas fa-check"></i> 1-on-1 Coaching</li>
+                            <li><i class="fas fa-check"></i> Valid on Study Visa</li>
+                            <li><i class="fas fa-check"></i> Test Day Simulation</li>
+                            <li><i class="fas fa-check"></i> Score Guarantee*</li>
+                            <li><i class="fas fa-check"></i> 24/7 Support</li>
+                        </ul>
+                        <button class="package-btn">Enroll Now</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- IELTS CTA -->
+            <div class="ielts-cta">
+                <div class="cta-content">
+                    <h3>Start Your IELTS Journey Today</h3>
+                    <p>Book a free IELTS diagnostic test and get a personalized study plan</p>
+                    <!-- <div class="cta-buttons">
+                        <button class="btn-primary btn-large" onclick="openModal()">
+                            <i class="fas fa-calendar-check"></i> Book Free Test
+                        </button>
+                         <a href="#" class="btn-outline">
+                            <i class="fas fa-file-download"></i> Download Brochure
+                        </a> 
+                    </div> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
          
 
         <!-- Call to Action Section -->
@@ -189,13 +433,85 @@
         </section>
     </main>
 
+
+    <!-- Consultation Pop-up Modal -->
+<div class="modal-overlay" id="consultationModal">
+    <div class="modal-container">
+        <div class="modal-header">
+            <h2>Book Free Consultation</h2>
+            <button class="modal-close" id="closeModal">&times;</button>
+        </div>
+        
+        <div class="modal-body">
+            <p class="modal-subtitle">Fill the form below and our expert will contact you within 24 hours</p>
+            
+            <form class="consultation-form" id="consultationForm">
+                <div class="form-group">
+                    <label for="name">Full Name *</label>
+                    <input type="text" id="name" name="name" required placeholder="Enter your full name">
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone">Phone Number *</label>
+                    <input type="tel" id="phone" name="phone" required placeholder="Enter your phone number">
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email Address *</label>
+                    <input type="email" id="email" name="email" required placeholder="Enter your email address">
+                </div>
+                
+                <div class="form-group">
+                    <label for="subject">Subject</label>
+                    <select id="subject" name="subject">
+                        <option value="">Select your interest</option>
+                        <option value="study_abroad">Study Abroad</option>
+                        <option value="visa">Visa Guidance</option>
+                        <option value="immigration">Immigration</option>
+                        <option value="ielts">IELTS Preparation</option>
+                        <option value="career">Career Counseling</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">Message (Optional)</label>
+                    <textarea id="message" name="message" rows="3" placeholder="Tell us about your requirements..."></textarea>
+                </div>
+                
+                <div class="form-footer">
+                    <button type="submit" class="submit-btn">
+                        <span>Submit Request</span>
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </div>
+            </form>
+            
+            <div class="modal-info">
+                <div class="info-item">
+                    <i class="fas fa-shield-alt"></i>
+                    <span>Your information is 100% secure</span>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-clock"></i>
+                    <span>Response within 24 hours</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-info">
                     <h3 class="footer-logo">ANANT GLOBAL</h3>
-                    <p class="footer-description">Your trusted partner for immigration and study abroad solutions since 2008.</p>
+                    <p class="footer-description">Your trusted partner for immigration and study abroad solutions.</p>
                     <div class="contact-info">
                         <p><i class="fas fa-envelope"></i> info@anantglobal.in</p>
                         <p><i class="fas fa-phone"></i> +91 9015220818</p>
@@ -222,27 +538,114 @@
                         <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
                     </div>
                     <p class="copyright">© 2025 ANANT GLOBAL. All rights reserved.</p>
+                  
+                </div>
+                  </div>
+                   
+                    <p class="version">anantglobal-version v.0.1</p>
                 </div>
             </div>
         </div>
     </footer>
 
-    <script>
-        // Simple mobile menu toggle functionality
-        document.getElementById('hamburger').addEventListener('click', function() {
-            const navMenu = document.getElementById('navMenu');
+     <script>
+        // Mobile menu toggle
+        const menuToggle = document.getElementById('menuToggle');
+        const navMenu = document.getElementById('navMenu');
+        
+        menuToggle.addEventListener('click', () => {
             navMenu.classList.toggle('active');
-            this.classList.toggle('active');
+            menuToggle.classList.toggle('active');
         });
         
-        // Close mobile menu when clicking on a link
+        // Close menu when clicking on a link
         document.querySelectorAll('.nav-link').forEach(link => {
-            link.addEventListener('click', function() {
-                const navMenu = document.getElementById('navMenu');
-                const hamburger = document.getElementById('hamburger');
+            link.addEventListener('click', () => {
                 navMenu.classList.remove('active');
-                hamburger.classList.remove('active');
+                menuToggle.classList.remove('active');
             });
+
+
+            // Consultation Modal
+const consultationModal = document.getElementById('consultationModal');
+const closeModal = document.getElementById('closeModal');
+const consultationForm = document.getElementById('consultationForm');
+const freeConsultationBtns = document.querySelectorAll('.btn-consultation, .btn-primary');
+
+// Function to open modal
+function openModal() {
+    consultationModal.classList.add('active');
+    document.body.style.overflow = 'hidden'; // Prevent scrolling
+}
+
+// Function to close modal
+function closeModalFunc() {
+    consultationModal.classList.remove('active');
+    document.body.style.overflow = ''; // Restore scrolling
+}
+
+// Open modal when clicking any consultation button
+freeConsultationBtns.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        openModal();
+    });
+});
+
+// Close modal when clicking X
+closeModal.addEventListener('click', closeModalFunc);
+
+// Close modal when clicking outside
+consultationModal.addEventListener('click', (e) => {
+    if (e.target === consultationModal) {
+        closeModalFunc();
+    }
+});
+
+// Close modal with Escape key
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && consultationModal.classList.contains('active')) {
+        closeModalFunc();
+    }
+});
+
+// Form submission (simulated)
+consultationForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    
+    // Get form data
+    const formData = new FormData(consultationForm);
+    const data = Object.fromEntries(formData);
+    
+    // Here you would typically send data to server
+    console.log('Form submitted:', data);
+    
+    // Show success message (optional)
+    const form = e.target;
+    form.innerHTML = `
+        <div class="success-message">
+            <i class="fas fa-check-circle"></i>
+            <h3>Thank You!</h3>
+            <p>Your consultation request has been submitted successfully. Our expert will contact you within 24 hours.</p>
+            <button type="button" class="submit-btn" onclick="closeModalFunc()">
+                <span>Close</span>
+            </button>
+        </div>
+    `;
+    
+    // Alternatively, you can reset form after submission
+    // consultationForm.reset();
+    // closeModalFunc();
+    // alert('Thank you! We will contact you soon.');
+});
+
+// Close menu when clicking on a link (existing code)
+document.querySelectorAll('.nav-link').forEach(link => {
+    link.addEventListener('click', () => {
+        navMenu.classList.remove('active');
+        menuToggle.classList.remove('active');
+    });
+    });
         });
     </script>
 </body>
