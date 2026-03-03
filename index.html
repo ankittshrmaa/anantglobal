@@ -445,11 +445,25 @@
         <div class="modal-body">
             <p class="modal-subtitle">Fill the form below and our expert will contact you within 24 hours</p>
             
-            <form class="consultation-form" id="consultationForm">
+           <form class="consultation-form" id="consultationForm" action="sendmail.php" method="POST">
                 <div class="form-group">
                     <label for="name">Full Name *</label>
-                    <input type="text" id="name" name="name" required placeholder="Enter your full name">
+                    <input type="text" id="name" name="fullname" required placeholder="Enter your full name">
                 </div>
+
+                <div class="form-group">
+    <label for="countrycode">Country Code *</label>
+    <select id="countrycode" name="countrycode" required>
+        <option value="+1">+1 (USA)</option>
+        <option value="+44">+44 (UK)</option>
+        <option value="+91" selected>+91 (India)</option>
+        <option value="+61">+61 (Australia)</option>
+        <option value="+86">+86 (China)</option>
+        <option value="+81">+81 (Japan)</option>
+        <option value="+49">+49 (Germany)</option>
+        <option value="+33">+33 (France)</option>
+    </select>
+</div>
                 
                 <div class="form-group">
                     <label for="phone">Phone Number *</label>
@@ -611,7 +625,7 @@ document.addEventListener('keydown', (e) => {
 
 // Form submission (simulated)
 consultationForm.addEventListener('submit', (e) => {
-    e.preventDefault();
+    // e.preventDefault();
     
     // Get form data
     const formData = new FormData(consultationForm);
@@ -648,5 +662,46 @@ document.querySelectorAll('.nav-link').forEach(link => {
     });
         });
     </script>
+<script>
+    // Check if URL parameters exist before trying to use them
+    const urlParams = new URLSearchParams(window.location.search);
+    
+    // Safely check if 'status' parameter exists
+    if (urlParams.has('status')) {
+        const status = urlParams.get('status');
+        
+        if (status === 'success') {
+            // Show success message in modal
+            const modalBody = document.querySelector('.modal-body');
+            const form = document.getElementById('consultationForm');
+            
+            if (form && modalBody) {
+                form.style.display = 'none';
+                const successHTML = `
+                    <div class="success-message" style="text-align: center; padding: 30px;">
+                        <i class="fas fa-check-circle" style="font-size: 60px; color: #4CAF50; margin-bottom: 20px;"></i>
+                        <h3 style="color: #333; margin-bottom: 15px;">Thank You!</h3>
+                        <p style="color: #666; margin-bottom: 25px;">Your consultation request has been submitted successfully. Our expert will contact you within 24 hours.</p>
+                        <button onclick="closeModalFunc(); window.location.href='index.html'" class="submit-btn" style="width: auto; padding: 10px 30px;">
+                            <span>Close</span>
+                        </button>
+                    </div>
+                `;
+                modalBody.innerHTML = successHTML;
+            }
+            
+            // Remove status from URL without page reload
+            const newUrl = window.location.pathname;
+            window.history.replaceState({}, document.title, newUrl);
+            
+        } else if (status === 'error') {
+            alert('Sorry, there was an error. Please try again or call us at +91 9015220818');
+            
+            // Remove status from URL without page reload
+            const newUrl = window.location.pathname;
+            window.history.replaceState({}, document.title, newUrl);
+        }
+    }
+</script>
 </body>
 </html>
