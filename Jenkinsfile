@@ -48,7 +48,7 @@ environment {
         stage('Verify') {
             steps {
                 echo 'Verifying Nginx is running...'
-                withCredentials([sshUserPrivateKey(credentialsId: 'website-ec2-ssh', keyFileVariable: 'PEM_KEY')]) {
+                withCredentials([sshUserPrivateKey(credentialsId: 'website-ssh', keyFileVariable: 'PEM_KEY')]) {
                     sh '''
                         ssh -i $PEM_KEY -o StrictHostKeyChecking=no $WEBSITE_USER@$WEBSITE_IP \
                         "systemctl is-active nginx && curl -o /dev/null -s -w '%{http_code}' http://localhost"
