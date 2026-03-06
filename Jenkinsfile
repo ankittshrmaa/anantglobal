@@ -35,6 +35,7 @@ environment {
                 echo 'Deploying new files to Website EC2...'
                 withCredentials([sshUserPrivateKey(credentialsId: 'website-ssh', keyFileVariable: 'PEM_KEY')]) {
                     sh '''
+                        sudo su \
                         rsync -avz --delete \
                         -e "ssh -i $PEM_KEY -o StrictHostKeyChecking=no" \
                         --exclude='Jenkinsfile' \
