@@ -2,7 +2,7 @@ pipeline {
     agent any
 
 environment {
-    WEBSITE_IP = '<1.1.1.9>'
+    WEBSITE_IP = '1.1.1.9'
     WEBSITE_USER = 'ubuntu'
     NGINX_ROOT = '/var/www/html/anantglobal'
     BACKUP_DIR = '/var/www/html/backup'
