@@ -1,0 +1,16 @@
+# documentation
+README.md
+AWS-Hosting.md
+
+# testing files
+test.html
+test.php
+
+# backups
+*.backup
+
+# dependency folders
+vendor/
+
+# dev files
+composer.lock
