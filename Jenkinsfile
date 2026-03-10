@@ -30,20 +30,20 @@ environment {
         //     }
         // }
 
-        // stage('Deploy') {
-        //     steps {
-        //         echo 'Deploying new files to Website EC2...'
-        //         withCredentials([sshUserPrivateKey(credentialsId: 'website-ssh', keyFileVariable: 'PEM_KEY')]) {
-        //             sh '''
-        //                 rsync -avz --delete \
-        //                 -e "ssh -i $PEM_KEY -o StrictHostKeyChecking=no" \
-        //                 --exclude='Jenkinsfile' \
-        //                 --exclude='.git' \
-        //                 ./ $WEBSITE_USER@$WEBSITE_IP:$NGINX_ROOT/
-        //             '''
-        //         }
-        //     }
-        // }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying new files to Website EC2...'
+                withCredentials([sshUserPrivateKey(credentialsId: 'website-ssh', keyFileVariable: 'PEM_KEY')]) {
+                    sh '''
+                        rsync -avz --delete \
+                        -e "ssh -i $PEM_KEY -o StrictHostKeyChecking=no" \
+                        --exclude='Jenkinsfile' \
+                        --exclude='.git' \
+                        ./ $WEBSITE_USER@$WEBSITE_IP:$NGINX_ROOT/
+                    '''
+                }
+            }
+        }
 
         stage('Verify') {
             steps {
